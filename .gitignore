@@ -1,0 +1,23 @@
+# Power BI Temporary and Cache Files
+*.tmp
+*.temp
+~$*.pbix
+*.pbix.temp
+AutoRecovery/
+*.pbit
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor and IDE Files
+.vscode/
+.idea/
+*.swp
+*~

@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <filter id="cshadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.25" />
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b48" />
+      <stop offset="100%" stop-color="#1b4965" />
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#118dff" />
+      <stop offset="100%" stop-color="#4092ff" />
+    </linearGradient>
+    <linearGradient id="colGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#12239e" />
+      <stop offset="100%" stop-color="#118dff" />
+    </linearGradient>
+    <linearGradient id="matrixGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102a43" />
+      <stop offset="100%" stop-color="#1e3a5f" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="100%" height="100%" fill="#0a0e17" rx="8" />
+  
+  <!-- Title / App Banner -->
+  <rect x="0" y="0" width="1200" height="42" fill="url(#headerGrad)" />
+  <circle cx="20" cy="21" r="6" fill="#f2c811" />
+  <text x="35" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Module 10: Sales &amp; Regional Performance Executive Dashboard</text>
+  <text x="1175" y="26" font-family="Segoe UI, sans-serif" font-size="12" fill="#888ea8" text-anchor="end">Canvas Resolution: 1920 × 1080 (16:9 Full HD)</text>
+
+  <!-- GRID DIVISION LINES / GUIDES -->
+  <!-- Top Left: Clustered Bar Chart (Sales by Product) -->
+  <!-- Scaled coordinates: 1080/1920 * 1200 = 675w, 614/1080 * 633 = 360h -->
+  <g transform="translate(15, 52)" filter="url(#cshadow)">
+    <rect width="660" height="350" rx="6" fill="#111927" stroke="#1f4287" stroke-width="1.2" />
+    <!-- Title Bar -->
+    <rect x="0" y="0" width="660" height="34" rx="6" fill="#162235" />
+    <text x="14" y="22" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#79c0ff">📊 Total Sales Revenue by Product</text>
+    <text x="646" y="22" font-family="Consolas, monospace" font-size="10" fill="#8b949e" text-anchor="end">Visual ID: b5c2d57f • clusteredBarChart</text>
+    
+    <!-- Y-axis labels & horizontal bars -->
+    <g font-family="Segoe UI, sans-serif" font-size="11" fill="#c9d1d9">
+      <!-- Item 1 -->
+      <text x="110" y="65" text-anchor="end">Beverage Brand A</text>
+      <rect x="120" y="52" width="450" height="18" rx="3" fill="url(#barGrad)" />
+      <text x="580" y="66" fill="#58a6ff" font-weight="bold">৳ 3,840,000</text>
+      
+      <!-- Item 2 -->
+      <text x="110" y="105" text-anchor="end">Beverage Brand B</text>
+      <rect x="120" y="92" width="380" height="18" rx="3" fill="url(#barGrad)" />
+      <text x="510" y="106" fill="#58a6ff" font-weight="bold">৳ 3,120,000</text>
+
+      <!-- Item 3 -->
+      <text x="110" y="145" text-anchor="end">Beverage Brand C</text>
+      <rect x="120" y="132" width="310" height="18" rx="3" fill="url(#barGrad)" />
+      <text x="440" y="146" fill="#58a6ff" font-weight="bold">৳ 2,650,000</text>
+
+      <!-- Item 4 -->
+      <text x="110" y="185" text-anchor="end">Beverage Brand D</text>
+      <rect x="120" y="172" width="260" height="18" rx="3" fill="url(#barGrad)" />
+      <text x="390" y="186" fill="#58a6ff" font-weight="bold">৳ 2,180,000</text>
+
+      <!-- Item 5 -->
+      <text x="110" y="225" text-anchor="end">Beverage Brand E</text>
+      <rect x="120" y="212" width="210" height="18" rx="3" fill="url(#barGrad)" />
+      <text x="340" y="226" fill="#58a6ff" font-weight="bold">৳ 1,740,000</text>
+
+      <!-- Item 6 -->
+      <text x="110" y="265" text-anchor="end">Beverage Brand F</text>
+      <rect x="120" y="252" width="160" height="18" rx="3" fill="url(#barGrad)" />
+      <text x="290" y="266" fill="#58a6ff" font-weight="bold">৳ 1,290,000</text>
+
+      <!-- Item 7 -->
+      <text x="110" y="305" text-anchor="end">Beverage Brand G</text>
+      <rect x="120" y="292" width="110" height="18" rx="3" fill="url(#barGrad)" />
+      <text x="240" y="306" fill="#58a6ff" font-weight="bold">৳ 890,000</text>
+    </g>
+
+    <!-- Axis line -->
+    <line x1="120" y1="42" x2="120" y2="325" stroke="#30363d" stroke-width="1.5" />
+    <text x="120" y="340" font-family="Segoe UI, sans-serif" font-size="10" fill="#8b949e">0</text>
+    <text x="350" y="340" font-family="Segoe UI, sans-serif" font-size="10" fill="#8b949e">৳ 2M</text>
+    <text x="570" y="340" font-family="Segoe UI, sans-serif" font-size="10" fill="#8b949e">৳ 4M</text>
+  </g>
+
+  <!-- Top Right: Clustered Column Chart (Sales by Division) -->
+  <g transform="translate(690, 52)" filter="url(#cshadow)">
+    <rect width="495" height="350" rx="6" fill="#111927" stroke="#1f4287" stroke-width="1.2" />
+    <rect x="0" y="0" width="495" height="34" rx="6" fill="#162235" />
+    <text x="14" y="22" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#79c0ff">📈 Regional Sales Performance (Total Sales by Division)</text>
+    <text x="481" y="22" font-family="Consolas, monospace" font-size="10" fill="#8b949e" text-anchor="end">12d3fe99 • clusteredColumnChart</text>
+
+    <!-- Vertical Column Bars -->
+    <g font-family="Segoe UI, sans-serif" font-size="10" fill="#c9d1d9">
+      <!-- Axis baseline -->
+      <line x1="40" y1="290" x2="465" y2="290" stroke="#30363d" stroke-width="1.5" />
+
+      <!-- Col 1: Chattogram -->
+      <rect x="65" y="80" width="55" height="210" rx="3" fill="url(#colGrad)" />
+      <text x="92" y="72" fill="#58a6ff" font-weight="bold" text-anchor="middle">৳ 5.8M</text>
+      <text x="92" y="306" fill="#c9d1d9" text-anchor="middle" font-weight="bold">Chattogram</text>
+
+      <!-- Col 2: Dhaka -->
+      <rect x="145" y="105" width="55" height="185" rx="3" fill="url(#colGrad)" />
+      <text x="172" y="97" fill="#58a6ff" font-weight="bold" text-anchor="middle">৳ 4.9M</text>
+      <text x="172" y="306" fill="#c9d1d9" text-anchor="middle">Dhaka</text>
+
+      <!-- Col 3: Sylhet -->
+      <rect x="225" y="160" width="55" height="130" rx="3" fill="url(#colGrad)" />
+      <text x="252" y="152" fill="#58a6ff" font-weight="bold" text-anchor="middle">৳ 3.2M</text>
+      <text x="252" y="306" fill="#c9d1d9" text-anchor="middle">Sylhet</text>
+
+      <!-- Col 4: Rajshahi -->
+      <rect x="305" y="200" width="55" height="90" rx="3" fill="url(#colGrad)" />
+      <text x="332" y="192" fill="#58a6ff" font-weight="bold" text-anchor="middle">৳ 2.1M</text>
+      <text x="332" y="306" fill="#c9d1d9" text-anchor="middle">Rajshahi</text>
+
+      <!-- Col 5: Khulna -->
+      <rect x="385" y="235" width="55" height="55" rx="3" fill="url(#colGrad)" />
+      <text x="412" y="227" fill="#58a6ff" font-weight="bold" text-anchor="middle">৳ 1.4M</text>
+      <text x="412" y="306" fill="#c9d1d9" text-anchor="middle">Khulna</text>
+    </g>
+    <text x="247" y="335" font-family="Segoe UI, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Geographic Administrative Divisions (Customers[Column4])</text>
+  </g>
+
+  <!-- Bottom Left: Matrix Visual (Customer & Product Matrix) -->
+  <g transform="translate(15, 415)" filter="url(#cshadow)">
+    <rect width="660" height="245" rx="6" fill="#111927" stroke="#1f4287" stroke-width="1.2" />
+    <rect x="0" y="0" width="660" height="34" rx="6" fill="#162235" />
+    <text x="14" y="22" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#79c0ff">📋 Customer &amp; Product Sales Matrix (Revenue &amp; Units Sold)</text>
+    <text x="646" y="22" font-family="Consolas, monospace" font-size="10" fill="#8b949e" text-anchor="end">1c47aa44 • pivotTable</text>
+
+    <!-- Matrix Table Wireframe -->
+    <g font-family="Segoe UI, sans-serif" font-size="10" fill="#c9d1d9">
+      <!-- Table Header Row -->
+      <rect x="15" y="44" width="630" height="24" fill="#1b2a4a" />
+      <text x="25" y="60" font-weight="bold" fill="#ffffff">Customer (Column2)</text>
+      <text x="180" y="60" font-weight="bold" fill="#58a6ff">Prod A (Qty / BDT)</text>
+      <text x="310" y="60" font-weight="bold" fill="#58a6ff">Prod B (Qty / BDT)</text>
+      <text x="440" y="60" font-weight="bold" fill="#58a6ff">Prod C (Qty / BDT)</text>
+      <text x="560" y="60" font-weight="bold" fill="#e3b341">Total Sales</text>
+
+      <!-- Row 1 -->
+      <rect x="15" y="70" width="630" height="22" fill="#131d2e" />
+      <text x="25" y="85">Anwar Hossain</text>
+      <text x="180" y="85">120  |  ৳ 48,000</text>
+      <text x="310" y="85">85   |  ৳ 34,000</text>
+      <text x="440" y="85">40   |  ৳ 18,000</text>
+      <text x="560" y="85" font-weight="bold" fill="#7ee787">৳ 100,000</text>
+
+      <!-- Row 2 -->
+      <rect x="15" y="94" width="630" height="22" fill="#0f1726" />
+      <text x="25" y="109">Bashir Ahmed</text>
+      <text x="180" y="109">95   |  ৳ 38,000</text>
+      <text x="310" y="109">110  |  ৳ 44,000</text>
+      <text x="440" y="109">60   |  ৳ 27,000</text>
+      <text x="560" y="109" font-weight="bold" fill="#7ee787">৳ 109,000</text>
+
+      <!-- Row 3 -->
+      <rect x="15" y="118" width="630" height="22" fill="#131d2e" />
+      <text x="25" y="133">Farhana Akter</text>
+      <text x="180" y="133">150  |  ৳ 60,000</text>
+      <text x="310" y="133">70   |  ৳ 28,000</text>
+      <text x="440" y="133">80   |  ৳ 36,000</text>
+      <text x="560" y="133" font-weight="bold" fill="#7ee787">৳ 124,000</text>
+
+      <!-- Row 4 -->
+      <rect x="15" y="142" width="630" height="22" fill="#0f1726" />
+      <text x="25" y="157">Kamal Uddin</text>
+      <text x="180" y="157">80   |  ৳ 32,000</text>
+      <text x="310" y="157">90   |  ৳ 36,000</text>
+      <text x="440" y="157">50   |  ৳ 22,500</text>
+      <text x="560" y="157" font-weight="bold" fill="#7ee787">৳ 90,500</text>
+
+      <!-- Row 5 (Summary) -->
+      <rect x="15" y="166" width="630" height="24" fill="#1b2a4a" />
+      <text x="25" y="182" font-weight="bold" fill="#ffffff">Matrix Total</text>
+      <text x="180" y="182" font-weight="bold" fill="#58a6ff">445  |  ৳ 178,000</text>
+      <text x="310" y="182" font-weight="bold" fill="#58a6ff">355  |  ৳ 142,000</text>
+      <text x="440" y="182" font-weight="bold" fill="#58a6ff">230  |  ৳ 103,500</text>
+      <text x="560" y="182" font-weight="bold" fill="#7ee787">৳ 423,500</text>
+    </g>
+    <text x="25" y="222" font-family="Segoe UI, sans-serif" font-size="10" fill="#8b949e">Rows: Customers (2)[Column2]  •  Columns: Sales (2)[Product]  •  Values: Sum(Quantity), Total Sales</text>
+  </g>
+
+  <!-- Bottom Right: Slicer Visual (Division Filter) -->
+  <g transform="translate(690, 415)" filter="url(#cshadow)">
+    <rect width="495" height="245" rx="6" fill="#111927" stroke="#1f4287" stroke-width="1.2" />
+    <rect x="0" y="0" width="495" height="34" rx="6" fill="#162235" />
+    <text x="14" y="22" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#79c0ff">🎯 Division Filter (Geographic Region)</text>
+    <text x="481" y="22" font-family="Consolas, monospace" font-size="10" fill="#8b949e" text-anchor="end">7be4977a • slicer</text>
+
+    <!-- Slicer Items List -->
+    <g font-family="Segoe UI, sans-serif" font-size="11" fill="#c9d1d9">
+      <!-- Active / Selected Item: Chattogram -->
+      <rect x="25" y="48" width="445" height="32" rx="4" fill="#1e3a5f" stroke="#58a6ff" stroke-width="1.5" />
+      <circle cx="45" cy="64" r="7" fill="#58a6ff" />
+      <circle cx="45" cy="64" r="3" fill="#ffffff" />
+      <text x="65" y="68" font-weight="bold" fill="#ffffff">Chattogram</text>
+      <rect x="365" y="54" width="90" height="20" rx="3" fill="#238636" />
+      <text x="410" y="68" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">ACTIVE FILTER</text>
+
+      <!-- Item 2: Dhaka -->
+      <rect x="25" y="86" width="445" height="28" rx="4" fill="#161b22" stroke="#30363d" />
+      <circle cx="45" cy="100" r="7" fill="none" stroke="#8b949e" stroke-width="1.5" />
+      <text x="65" y="104">Dhaka</text>
+
+      <!-- Item 3: Sylhet -->
+      <rect x="25" y="120" width="445" height="28" rx="4" fill="#161b22" stroke="#30363d" />
+      <circle cx="45" cy="134" r="7" fill="none" stroke="#8b949e" stroke-width="1.5" />
+      <text x="65" y="138">Sylhet</text>
+
+      <!-- Item 4: Rajshahi -->
+      <rect x="25" y="154" width="445" height="28" rx="4" fill="#161b22" stroke="#30363d" />
+      <circle cx="45" cy="168" r="7" fill="none" stroke="#8b949e" stroke-width="1.5" />
+      <text x="65" y="172">Rajshahi</text>
+
+      <!-- Item 5: Khulna -->
+      <rect x="25" y="188" width="445" height="28" rx="4" fill="#161b22" stroke="#30363d" />
+      <circle cx="45" cy="202" r="7" fill="none" stroke="#8b949e" stroke-width="1.5" />
+      <text x="65" y="206">Khulna</text>
+    </g>
+    <text x="25" y="235" font-family="Segoe UI, sans-serif" font-size="10" fill="#8b949e">Field: Customers (2)[Column4]  •  Filter Mode: Basic Single / Multi-Select</text>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradHeaderDim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f4287" />
+      <stop offset="100%" stop-color="#278ea5" />
+    </linearGradient>
+    <linearGradient id="gradHeaderFact" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f" />
+      <stop offset="100%" stop-color="#0f4c81" />
+    </linearGradient>
+    <linearGradient id="gradHeaderMeas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107c41" />
+      <stop offset="100%" stop-color="#2e7d32" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.3" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#58a6ff" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0d1117" rx="12" />
+  
+  <!-- Header Title -->
+  <text x="480" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc" text-anchor="middle">Power BI Semantic Data Model — Module 10</text>
+  <text x="480" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Commercial Sales &amp; Regional Distribution Star Schema</text>
+
+  <!-- Customers (2) Dimension Table -->
+  <g transform="translate(60, 110)" filter="url(#shadow)">
+    <rect width="260" height="340" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    <path d="M 0 8 Q 0 0 8 0 L 252 0 Q 260 0 260 8 L 260 42 L 0 42 Z" fill="url(#gradHeaderDim)" />
+    <text x="14" y="27" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#ffffff">👥 Customers (2) [Dimension]</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="16" y="72" fill="#e3b341" font-weight="bold">🔑 Column1 (PK: Customer ID)</text>
+      <text x="16" y="100">   Column2 (Customer Name)</text>
+      <text x="16" y="128">   Column3 (District / City)</text>
+      <text x="16" y="156" fill="#79c0ff" font-weight="bold">📌 Column4 (Division / Region)</text>
+      <line x1="12" y1="176" x2="248" y2="176" stroke="#30363d" stroke-width="1" />
+      <text x="16" y="202" fill="#7ee787" font-weight="bold">∑ Total Sales (DAX Measure)</text>
+      <line x1="12" y1="222" x2="248" y2="222" stroke="#30363d" stroke-width="1" />
+      <text x="16" y="248" fill="#8b949e" font-size="11">Table Role: Primary Dimension</text>
+      <text x="16" y="272" fill="#8b949e" font-size="11">Cardinality: 1 (One side)</text>
+      <text x="16" y="296" fill="#58a6ff" font-size="11">Cross-filter: Single Direction (→)</text>
+      <text x="16" y="320" fill="#8b949e" font-size="11">LineageTag: e513b8ef-f4ab...</text>
+    </g>
+  </g>
+
+  <!-- Relationship Connector Line -->
+  <path d="M 320 200 L 400 200" fill="none" stroke="#58a6ff" stroke-width="2.5" marker-end="url(#arrow)" />
+  <circle cx="320" cy="200" r="4" fill="#e3b341" />
+  <text x="330" y="190" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#e3b341">1</text>
+  <text x="382" y="190" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#58a6ff">*</text>
+  <rect x="335" y="210" width="55" height="18" rx="3" fill="#1f4287" />
+  <text x="362" y="223" font-family="Segoe UI, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">ACTIVE</text>
+
+  <!-- Sales (2) Fact Table -->
+  <g transform="translate(400, 110)" filter="url(#shadow)">
+    <rect width="260" height="340" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="1.8" />
+    <path d="M 0 8 Q 0 0 8 0 L 252 0 Q 260 0 260 8 L 260 42 L 0 42 Z" fill="url(#gradHeaderFact)" />
+    <text x="14" y="27" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#58a6ff">📊 Sales (2) [Fact Table]</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="16" y="72" fill="#e3b341" font-weight="bold">🔗 Customer ID (FK)</text>
+      <text x="16" y="100" fill="#79c0ff" font-weight="bold">📦 Product (Category)</text>
+      <text x="16" y="128">   Quantity (Units Sold)</text>
+      <text x="16" y="156">   Unit Price (BDT)</text>
+      <text x="16" y="184">   Sales Amount (Gross BDT)</text>
+      <line x1="12" y1="204" x2="248" y2="204" stroke="#30363d" stroke-width="1" />
+      <text x="16" y="230" fill="#8b949e" font-size="11">Table Role: Transactional Fact</text>
+      <text x="16" y="254" fill="#8b949e" font-size="11">Cardinality: * (Many side)</text>
+      <text x="16" y="278" fill="#8b949e" font-size="11">Storage: In-Memory VertiPaq</text>
+      <text x="16" y="302" fill="#8b949e" font-size="11">LineageTag: a6626a50-51e8...</text>
+    </g>
+  </g>
+
+  <!-- DAX Measure Explanatory Card -->
+  <g transform="translate(685, 110)" filter="url(#shadow)">
+    <rect width="225" height="340" rx="8" fill="#161b22" stroke="#238636" stroke-width="1.5" />
+    <path d="M 0 8 Q 0 0 8 0 L 217 0 Q 225 0 225 8 L 225 42 L 0 42 Z" fill="url(#gradHeaderMeas)" />
+    <text x="14" y="27" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#ffffff">📐 DAX Calculations Hub</text>
+    
+    <g font-family="Segoe UI, sans-serif" font-size="11" fill="#c9d1d9">
+      <rect x="12" y="55" width="201" height="95" rx="6" fill="#0d1117" stroke="#30363d" />
+      <text x="20" y="74" fill="#7ee787" font-weight="bold" font-family="Consolas, monospace" font-size="11">Total Sales =</text>
+      <text x="20" y="92" fill="#c9d1d9" font-family="Consolas, monospace" font-size="10">SUM('Sales (2)'</text>
+      <text x="20" y="108" fill="#c9d1d9" font-family="Consolas, monospace" font-size="10">    [Sales Amount])</text>
+      <text x="20" y="132" fill="#8b949e" font-size="10">Aggregation: Revenue (BDT)</text>
+
+      <rect x="12" y="165" width="201" height="85" rx="6" fill="#0d1117" stroke="#30363d" />
+      <text x="20" y="184" fill="#58a6ff" font-weight="bold" font-family="Consolas, monospace" font-size="11">Sum of Quantity =</text>
+      <text x="20" y="202" fill="#c9d1d9" font-family="Consolas, monospace" font-size="10">SUM('Sales (2)'</text>
+      <text x="20" y="218" fill="#c9d1d9" font-family="Consolas, monospace" font-size="10">    [Quantity])</text>
+      <text x="20" y="238" fill="#8b949e" font-size="10">Aggregation: Volume Units</text>
+
+      <rect x="12" y="265" width="201" height="65" rx="6" fill="#1f242c" stroke="#30363d" />
+      <text x="20" y="284" fill="#e3b341" font-weight="bold">Context Propagation:</text>
+      <text x="20" y="302" fill="#8b949e" font-size="10">Filter from Customers[Column4]</text>
+      <text x="20" y="318" fill="#8b949e" font-size="10">propagates directly to Sales (2)</text>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <text x="480" y="485" font-family="Segoe UI, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Diagram follows official VertiPaq tabular star schema architecture verified across Power BI Desktop &amp; Fabric PBIR formats.</text>
+</svg>
