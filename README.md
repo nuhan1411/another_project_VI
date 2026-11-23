@@ -194,18 +194,9 @@ Execute the following commands from your terminal to initialize and push this pr
 # 1. Navigate into the project folder
 cd "PowerBI_Module_10_Assignment"
 
-# 2. Initialize a Git repository
-git init -b main
+# 2. Link the remote GitHub repository
+git remote add origin https://github.com/nuhan1411/another_project_VI.git
 
-# 3. Stage all files
-git add .
-
-# 4. Commit the refined project
-git commit -m "feat: complete refinements and setup for Module 10 Assignment Power BI report"
-
-# 5. Link your remote GitHub repository
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-
-# 6. Push to main branch
+# 3. Push to main branch
 git push -u origin main
 ```
